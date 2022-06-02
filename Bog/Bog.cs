@@ -2,6 +2,12 @@
 {
     internal class Bogen
     {
+        public int BogId { get; set; }
+        public string Titel { get; set; }
+        public string Forfatter { get; set; }
+        public string IsbnNummer { get; set; }
+        public DateTime Udgivelse { get; set; }
+
         int _bogId = default!;
         string _titel = default!;
         string _forfatter = default!;
@@ -15,6 +21,13 @@
             _forfatter = forfatter;
             _isbnNummer = isbnNummer;
             _udgivelse = udgivelse;
+        }
+        public Bogen(string titel, string forfatter, string isbnNummer, DateTime udgivelse)
+        {
+            Titel = titel;
+            Forfatter = forfatter;
+            IsbnNummer = isbnNummer;
+            Udgivelse = udgivelse;
         }
         public string HentBog()
         {
