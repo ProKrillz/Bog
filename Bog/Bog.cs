@@ -7,15 +7,10 @@
         public string Forfatter { get; set; }
         public string IsbnNummer { get; set; }
         public DateTime Udgivelse { get; set; }
-<<<<<<< HEAD
+
 
         int _bogId = default!;
         string _titel = default!;
-        string _forfatter = default!;
-        string _isbnNummer = default!;
-        DateTime _udgivelse = default!;
-=======
->>>>>>> Dev
 
         public Bogen() { }
 
@@ -38,14 +33,6 @@
         public string HentBog()
         {
             return $"Bog Id: {_bogId}\nTitel: {_titel}\nForfatter: {_forfatter}\nIsbn nummer: {_isbnNummer}\nUdgivelse: {_udgivelse.Year}";
-        }
-        public string HentBogTitel()
-        {
-            return $"Titel: {_titel}";
-=======
-            BogId = bogId;
-            Titel = titel;
->>>>>>> Dev
         }
     }
 }
