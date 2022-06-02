@@ -3,13 +3,17 @@
 class Program
 {
     public static void Main()
-    {   
-        Bogen DeBlå = new Bogen(1, "De blå bæster", "R.L Stine", "8721018707", new DateTime(2002, 01, 01));
-        Bogen BogenOmC = new Bogen(2, "Bogen om C# 9.0", "Michell Cronberg", "9788799338238", new DateTime(2021, 01, 01));
-        Console.WriteLine(DeBlå.HentBog());
-        Console.WriteLine(DeBlå.HentBogTitel());
-        Console.WriteLine(BogenOmC.HentBog());
-
-        Bogen deBlå2 = new Bogen("test", "thomas", "111111", new DateTime(2020, 01, 01));       
+    {      
+        Bogen bogen = new Bogen 
+        { 
+            BogId = 1, 
+            Titel = "Den gode bog", 
+            Forfatter = "Thomas", 
+            IsbnNummer = "123456", 
+            Udgivelse = new DateTime(2020, 04, 22)
+        };
+        Bogen bogen2 = new Bogen(2, "Den onde bog") { Forfatter = "Satan", IsbnNummer = "666", Udgivelse = new DateTime(2006, 6, 6) };
+        Blad blad = new Blad { BladId = 1, Titel = "Anders And", IsbnNummer = "354634", Udgivelse = new DateTime(2022, 5, 3) };
+        Blad blad2 = new Blad(2, "Stålanden", "649374938", new DateTime(2013, 1, 1));
     }
 }
